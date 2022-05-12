@@ -15,8 +15,16 @@ echo "$c+$a/$b = $y"
 echo "$a%$b+$c = $z"
 
 declare -A storage
-storage[firstresult]=$w
+storage[firstResult]=$w
 storage[secondResult]=$x
-storage[trhirdResult]=$y
-storage[fourthReslut]=$z
-echo "${storage[@]}"
+storage[thirdResult]=$y
+storage[fourthResult]=$z
+echo "Dictionary: ${storage[@]}"
+
+i=0
+arr[((i++))]=${storage[firstResult]}
+arr[((i++))]=${storage[secondResult]}
+arr[((i++))]=${storage[thirdResult]}
+arr[((i++))]=${storage[fourthResult]}
+
+echo "Array: ${arr[@]}"
