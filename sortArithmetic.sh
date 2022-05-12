@@ -29,20 +29,23 @@ arr[((i++))]=${storage[fourthResult]}
 
 echo "Array: ${arr[@]}"
 
-for (( i=0; i<=${#arr[@]}; i++ ))
+
+for (( i=0; i<${#arr[@]}; i++ ))
 do
-	for (( j=0; j<=${#arr[@]}; j++ ))
-	do
-		if [[ ${arr[$j]} -lt ${arr[$i]} ]]
-		then
-			temp=${arr[$i]}
-			arr[$i]=${arr[$j]}
-			arr[$j]=$temp
-		fi
-	done
+        for (( j=i+1; j<${#arr[@]}; j++ ))
+        do
+                if [[ ${arr[$i]} -gt ${arr[$j]} ]]
+                then
+                        temp=${arr[$i]}
+                        arr[$i]=${arr[$j]}
+                        arr[$j]=$temp
+                fi
+        done
 done
-echo "Descending order:"
-for n in "${arr[@]}"
+echo "Ascending order:"
+for n in ${arr[@]}
 do
-	echo "$n"
+        echo "$n"
 done
+
+
