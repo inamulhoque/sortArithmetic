@@ -29,9 +29,9 @@ arr[((i++))]=${storage[fourthResult]}
 
 echo "Array: ${arr[@]}"
 
-for (( i=0; i<=${#arr[@]}; i++ ))
+for (( i=0; i<${#arr[@]}; i++ ))
 do
-	for (( j=0; j<=${#arr[@]}; j++ ))
+	for (( j=0; j<${#arr[@]}; j++ ))
 	do
 		if [[ ${arr[$j]} -lt ${arr[$i]} ]]
 		then
