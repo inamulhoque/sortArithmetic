@@ -3,9 +3,11 @@
 read -p "Enter the value of a : " a
 read -p "Enter the value of b : " b
 read -p "Enter the value of c : " c
-x=$(( $a + $b * $c ))
-y=$(( $a * $b + $c ))
-z=$((`expr $c + $a / $b | bc` ))
-echo "$a+$b*$c = $x"
-echo "$a*$b+$c = $y"
-echo "$c+$a/$b = $z"
+w=$(( $a + $b * $c ))
+x=$(( $a * $b + $c ))
+y=$((`expr $c + $a / $b | bc` ))
+z=$(( $a % $b + $c ))
+echo "$a+$b*$c = $w"
+echo "$a*$b+$c = $x"
+echo "$c+$a/$b = $y"
+echo "$a%$b+$c = $z"
