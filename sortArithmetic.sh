@@ -28,3 +28,21 @@ arr[((i++))]=${storage[thirdResult]}
 arr[((i++))]=${storage[fourthResult]}
 
 echo "Array: ${arr[@]}"
+
+for (( i=0; i<=${#arr[@]}; i++ ))
+do
+	for (( j=0; j<=${#arr[@]}; j++ ))
+	do
+		if [[ ${arr[$j]} -lt ${arr[$i]} ]]
+		then
+			temp=${arr[$i]}
+			arr[$i]=${arr[$j]}
+			arr[$j]=$temp
+		fi
+	done
+done
+echo "Descending order:"
+for n in "${arr[@]}"
+do
+	echo "$n"
+done
