@@ -13,3 +13,10 @@ echo "$a+$b*$c = $w"
 echo "$a*$b+$c = $x"
 echo "$c+$a/$b = $y"
 echo "$a%$b+$c = $z"
+
+declare -A storage
+storage[firstresult]=$w
+storage[secondResult]=$x
+storage[trhirdResult]=$y
+storage[fourthReslut]=$z
+echo "${storage[@]}"
