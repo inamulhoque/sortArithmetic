@@ -1,3 +1,5 @@
 #!/bin/bash -x
 
-echo "Enter the value of a, b & c :" a b c
+read -p "Enter the value of a : " a
+read -p "Enter the value of b : " b
+read -p "Enter the value of c : " c
